@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "虾皮价格批量修改器",
+  "version": "1.0.0",
+  "description": "批量修改虾皮商品折扣价格的浏览器插件",
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
